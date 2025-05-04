@@ -2,12 +2,92 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pete Thinkful</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header,
+    footer {
+      background-color: #f4f4f4;
+      padding: 20px 0;
+    }
+
+    header h1,
+    footer p {
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #about {
+      padding: 40px 20px;
+    }
+
+    #about h2 {
+      font-size: 2rem;
+    }
+
+    .image-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+    }
+
+    #portfolio {
+      padding: 40px 20px;
+    }
+
+    #portfolio h2 {
+      font-size: 2rem;
+    }
+
+    #portfolio article > div {
+      margin-bottom: 30px;
+    }
+
+    #portfolio h3,
+    #portfolio img,
+    #portfolio p {
+      text-align: center;
+      margin: auto;
+    }
+
+    .activities {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    #contact {
+      padding: 40px 20px;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -21,27 +101,50 @@
   </header>
 
   <main>
-    <section id="about"> <article> <h2>About Me</h2>
-        <img class="image-circle" src="images/pete-thinkful.png" alt="Pete Thinkful Profile Picture"> <p>Hi! I'm Pete Thinkful. I'm just starting my journey into web development and design.</p>
+    <section id="about">
+      <article>
+        <h2>About Me</h2>
+        <img class="image-circle" src="images/pete-thinkful.png" alt="Pete Thinkful Profile Picture" />
+        <p>Hi! I'm Pete Thinkful. I'm just starting my journey into web development and design.</p>
         <p>I find it really exciting to create things that live on the internet. Currently learning HTML and CSS!</p>
-        </article>
-    </section> <hr>
-
-    <section id="portfolio"> <h2>Portfolio</h2>
-      <article> <div>
-          <h3>Abstract Red</h3> <img src="images/abstract-red.png" alt="Abstract Red Composition"> <p>A simple piece exploring shades of red.</p> </div>
-        <div>
-          <h3>Spiral Zany</h3> <img src="images/spiral-zany.png" alt="Colorful Spiral Pattern"> <p>Fun with spirals and colors.</p> </div>
-        <div>
-          <h3>Melted Rainbow</h3> <img src="images/melted-rainbow.png" alt="Abstract Dripping Rainbow Colors"> <p>An experiment with dripping colors.</p> </div>
       </article>
-    </section> <hr>
+    </section>
+    <hr />
 
-    <section id="contact"> <h2>Contact</h2>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <article>
+        <div>
+          <h3>Abstract Red</h3>
+          <img src="images/abstract-red.png" alt="Abstract Red Composition" />
+          <p>A simple piece exploring shades of red.</p>
+        </div>
+        <div>
+          <h3>Spiral Zany</h3>
+          <img src="images/spiral-zany.png" alt="Colorful Spiral Pattern" />
+          <p>Fun with spirals and colors.</p>
+        </div>
+        <div>
+          <h3>Melted Rainbow</h3>
+          <img src="images/melted-rainbow.png" alt="Abstract Dripping Rainbow Colors" />
+          <p>An experiment with dripping colors.</p>
+        </div>
+        <ul class="activities">
+          <li>Producing abstract art</li>
+          <li>Creating street graffiti art</li>
+          <li>Connecting with like-minded artists</li>
+        </ul>
+      </article>
+    </section>
+    <hr />
+
+    <section id="contact">
+      <h2>Contact</h2>
       <p>I'd love to hear from you! Feel free to reach out.</p>
       <p>Email: pete.thinkful@example.com (Not a real email)</p>
       <p>Phone: 123-456-7890 (Not a real number)</p>
-      </section> </main>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; Pete Thinkful. All rights reserved.</p>

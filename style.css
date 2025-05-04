@@ -2,9 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
 body {
-  color: #003049;
+  color: #003049; /* Dark blue text */
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
   padding: 40px;
+  background-color: #eae2b7; /* Light tan background */
 }
 
 /* Set the font family for any h1, h2, or h3 heading */
@@ -12,38 +13,118 @@ h1,
 h2,
 h3 {
   font-family: "Playfair Display", Times, serif;
+  text-align: center; /* Center all headings */
 }
+
+h1 {
+  font-size: 2.5em; /* Make main heading bigger */
+  color: #d62828; /* Red color for main heading */
+}
+
+h2 {
+  color: #f77f00; /* Orange color for section headings */
+}
+
+h3 {
+  color: #003049; /* Back to dark blue for portfolio item titles */
+  margin-bottom: 5px; /* Reduce space below portfolio title */
+}
+
+/* Style the navigation links */
+nav {
+  text-align: center; /* Center the nav block */
+  margin-bottom: 20px; /* Add space below nav */
+}
+
+nav a {
+  color: #d62828; /* Red links */
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Add space between links */
+  font-weight: bold; /* Make links bold */
+}
+
+nav a:hover {
+  color: #f77f00; /* Orange hover effect */
+  text-decoration: underline; /* Underline on hover */
+}
+
 
 article {
-  padding: 50px 0;
+  padding: 20px 0; /* Reduced vertical padding slightly */
 }
 
+/* This rule applies to the DIVs used for portfolio items */
 article div {
   text-align: center;
-  width: 100%;
+  /* width: 100%; REMOVED - This conflicted with the generic div rule below */
+  border: 1px solid #fcbf49; /* Add a light orange border to portfolio items */
+  padding: 15px; /* Add some padding inside the border */
+  margin-bottom: 20px; /* Space between portfolio items */
+  background-color: #fff; /* White background for portfolio items */
 }
 
 p {
   line-height: 1.5;
+  text-align: center; /* Center align paragraphs too */
 }
 
 /* The div container constrains the content width within the main container to 600px */
+/* WARNING: This applies to ALL divs, which might be too broad. A beginner might do this. */
+/* This rule centers the portfolio item divs themselves, as they are direct children of article */
 div {
-  margin: auto;
-  width: 600px;
+  margin: auto; /* Center the div */
+  width: 600px; /* Set a fixed width */
+  max-width: 95%; /* Make sure it doesn't break out on small screens */
 }
 
 img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  width: 100%; /* Make image take full width of its container */
+  max-width: 200px; /* But limit maximum size */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Helps with centering if margin auto is used */
+  margin-left: auto; /* Center the image itself */
+  margin-right: auto;
+  margin-bottom: 10px; /* Space below image */
 }
 
 hr {
-  border: 1px solid black;
+  border: 1px solid #003049; /* Make hr match text color */
+  margin: 40px auto; /* Add more space around the horizontal rule */
+  width: 50%; /* Make HR shorter */
 }
+
+/* === Style specific sections === */
+
+#about article div {
+  /* Override the border/padding for the div in the about section if it exists
+     In the provided HTML, the image wasn't in a div directly under article,
+     so this might not apply directly, but shows how a beginner might target */
+  border: none;
+  padding: 0;
+  background-color: transparent; /* No background */
+}
+
+#contact p {
+  margin-bottom: 5px; /* Less space between contact lines */
+}
+
+footer {
+  margin-top: 40px; /* Space above footer */
+  padding-top: 20px; /* Padding inside footer */
+  border-top: 2px solid #003049; /* Thicker top border */
+  text-align: center; /* Center footer text */
+  font-size: 0.9em; /* Slightly smaller text */
+  color: #666; /* Grey text for footer */
+}
+
 
 /* Add your solution below */
 
 .image-circle {
+  border-radius: 50%; /* Make the image round */
+  border: 5px solid #d62828; /* Add a solid red border */
+  width: 150px; /* Override the generic image size */
+  max-width: 150px; /* Override the generic image size */
+  height: 150px; /* Force height to match width for circle */
+  object-fit: cover; /* Prevents image distortion if not square */
 }
