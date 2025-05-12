@@ -14,6 +14,7 @@
       text-align: center;
       margin: 0;
       padding: 0;
+      background-color: #f0f0f5; /* Updated background to match mockup */
     }
 
     header,
@@ -72,6 +73,13 @@
       margin: auto;
     }
 
+    #portfolio img {
+      width: 200px; /* Reduced image size */
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
     .activities {
       list-style-type: disc;
       padding-left: 20px;
@@ -86,6 +94,39 @@
 
     #contact h2 {
       font-size: 2rem;
+    }
+
+    #contact form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    #contact label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    #contact input,
+    #contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #contact button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #contact button:hover {
+      background-color: #555;
     }
   </style>
 </head>
@@ -140,9 +181,18 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>I'd love to hear from you! Feel free to reach out.</p>
-      <p>Email: pete.thinkful@example.com (Not a real email)</p>
-      <p>Phone: 123-456-7890 (Not a real number)</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
